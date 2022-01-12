@@ -1,5 +1,4 @@
 package carproject;
-
 import java.util.Scanner;
 
 public class CarInventoryMgmt {
