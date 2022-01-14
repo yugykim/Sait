@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index.html</title>
+</head>
+<body>
+  <div>
+    <header id="top">
+      <h1>First page</h1>
+    </header>
+    <div>
+      <div class="fist">
+        <img src="img/dmitry-osipenko-GKxS58vAb8o-unsplash.jpg" height="1000" width="1000" alt="" title="">
+        <!-- Internal -->
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+        </p>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.
+        </p>
+        <p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum.
+        </p>
+      </div>
+      <div>
+        <table>
+          <form action="http://www.yahoo.com" method="post"> <!-- get / post: more secure -->
+             <tr>
+                <td><label for="t1">Name</label></td>
+                <td>
+                   <input id="t1" type="text" maxlength="5" size="40px" autofocus required>
+                </td>
+             </tr>
+             <tr>
+                <td><label for="t2">Email Address</label></td>
+                <td>
+                   <textarea id="t2" rows=5 cols=10></textarea>
+                </td>
+             </tr>
+             <tr>
+                <td><label for="t3">Contact Phone</label></td>
+                <td>
+                   <input type="password" id="t3"></input>
+                </td>
+             </tr>
+        </table>
+        <form>
+          <form action="http://www.yahoo.com" method="post"> 
+          <label for="t4">Campus</label><br>
+            <!-- check box separate name / if same name => still can multiple choise but selected last one (that we can't check) that's why we give different name -->
+          <input type="checkbox" name="c1" checked> Campus location</input>
+          <input type="checkbox" name="c2"> Athletic Centre</input>
+          <input type="checkbox" name="c3"> Student Centre</input>
+          <input type="checkbox" name="c3"> Lab Classes</input><br>
+          <label for="t4">SAIT</label><br>
+            <!-- only choose 1 at that time -->
+          <input type="radio" name="r1">Open House</input>
+          <input type="radio" name="r1">Advertising</input>
+          <input type="radio" name="r1">School Counselling</input>
+          <input type="radio" name="r1">Word of Mouth</input><br>
+
+          <label for="t4">Country</label>
+          <select>
+                <!-- spell, character, and case same -->
+            <option value="Canada">Canada</option>
+            <option value="Us" selected>US</option>
+            <option value="NZ">NZ</option>
+          </select><br>
+          <input type="submit" value="OK">Submit</input>
+          <input type="reset" value="Cancel">reset</input>
+        </form>    
+      </div>
+      <div>
+        <a href="#top">Top</a>
+      </div>
+      <footer>
+        <!-- Anchor External -->
+        <a href="page3.html">The previous page</a>
+        <a href="page2.html">The next page</a>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
