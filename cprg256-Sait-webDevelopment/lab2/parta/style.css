@@ -1,0 +1,24 @@
+* {
+  background-color: antiquewhite;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+}
+
+
+@media print {
+   
+  h1 {
+     font-size: 70%;
+  }
+
+   h3 {
+       font-size: 70%;
+   }
+
+   body {
+     background-image: none;
+     background-color: transparent; 
+       font-size: 70%;
+  }
+}
+}
