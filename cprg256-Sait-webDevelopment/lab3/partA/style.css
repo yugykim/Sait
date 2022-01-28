@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: antiquewhite;
+  width: 80%;
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 5em;
+}
+
+.big {
+  margin-bottom: 5rem;
+}
+
+.big::first-letter {
+  font-size: 30px;
+  color: brown;
+  font-weight: bold;
+}
+
+img {
+  width: 200px;
+  float: left;
+  margin: 10px;
+}
+
+#davidPhoto {
+  width: 200px;
+}
+
