@@ -14,7 +14,7 @@ public class Exercise11_17 {
         if ((input % i) == 0 ){
           input = input / i;
           list.add(i);
-          //System.out.println(i);
+          System.out.println(i);
         }
       }
     }
@@ -31,6 +31,7 @@ public class Exercise11_17 {
 
     
     for(int e : list){
+      System.out.println(e);
       if(e != -1){
         oddNumResult *= e;
       }
