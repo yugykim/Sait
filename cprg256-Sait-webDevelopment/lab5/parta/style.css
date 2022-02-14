@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  overflow: scroll;
+  box-sizing: border-box;
+  padding: 1rem;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 50rem;
+  height: 30rem;
+}
+
+.input-boxs {
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  margin: 1rem;
+}
+
+select {
+  margin-left: 1rem;
+}
+
+.display-result, .input-box {
+  border: 1px solid #DCDCDC;
+  width: 20rem;
+  height: 6rem;
+}
+
+input {
+  outline: none;
+}
+
+#chosenMeserment, #related-meserment-choice {
+  border: 1px solid black;
+}
+
+

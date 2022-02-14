@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href="style.css">
+  
+</head>
+<body>
+  <div class="content">
+    <div class="inner-content">
+      <label for="measerment-select">Choose a meserment:
+        <select name="measerment" class="measerment-select">
+          <option value="">Select One …</option>
+          <option value="litter">litter</option>
+          <option value="gallon">gallon</option>
+          <option value="metre">metre</option>
+          <option value="feet">feet</option>
+        </select>
+      </label>
+      <div class="input-boxs">
+        <div class="input-box">
+          <input placeholder="Enter Number" name="name"/>
+          <p id="chosenMeserment"></p>
+        </div>
+        <div class="display-result">
+          <p id="number"></p>
+          <p id="related-meserment-choice"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

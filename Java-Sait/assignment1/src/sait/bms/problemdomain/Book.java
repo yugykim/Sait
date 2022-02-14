@@ -39,9 +39,9 @@ public class Book {
     return this.total;
   }
 
-  public void reduceTotalNumber() {
-    if (this.total > 0){
-      this.total--;
+  public void reduceAvailableNumber() {
+    if (this.available > 0){
+      this.available--;
     }
   }
 

@@ -63,20 +63,27 @@ public class Manager {
 
     for (Book book : books) {
       if (book.getIsbn() == UserInputIsbn) {
-        System.out.println(book.getTotal());
         if (book.getTotal() > 0) {
-          book.reduceTotalNumber();
-          mainDashboard();
-          break;
+          if (!(book instanceof Periodical)){
+            book.reduceAvailableNumber();
+            System.out.println("The book \"" + book.getTitle() + "\" has been checked out");
+            System.out.println("It can be located using a calling number: " + book.getCall());
+            
+            break;
+          } else {
+            System.out.println("Periodical");
+            break;
+          }
         } else {
           System.out.println("The book " + book.getTitle() + " has been checked out.");
           System.out.println("It can be located using a call number: " + book.getCall());
+          break;
         }
 
-      } else {
-        System.out.println("Wrong ISBN");
       }
     }
+
+    mainDashboard();
     sc.nextLine();
   }
 
