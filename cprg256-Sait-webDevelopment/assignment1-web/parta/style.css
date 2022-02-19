@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4vw;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.heading-image {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+}
+
+.heading {
+  width: 100%;
+  font-size: 2vw;
+  text-align: center;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  row-gap: 1rem;
+}
+
+.flex > * {
+  flex: 2;
+}
+
+.flex > .box-1 {
+  flex: 3;
+  max-width: 50vw;
+  min-width: 30vw;
+}
+
+.flex > .box-2 {
+  margin: 1rem;
+  width: 30vw;
+  height: 20vw;
+}
+
+
+.box-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-box-1 {
+  border: 1px solid black;
+  margin: 10rem;
+}
+
+.inner-box-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2px;
+  background-color: gray;
+  width: 25vw;
+  height: 20vw;
+  color: white;
+}
+
+.inner-box-2 > * {
+  flex: 1;
+}
+
+.inner-box-2 > .first {
+  font-size: 2vw;
+  margin: 1vw 3vw;
+}
+
+.inner-box-2 > .second {
+  font-size: 1.5vw;
+  margin: 2vw 5vw;
+}
+
+.firstP, .secondP, .thirdP {
+  width: 90vw;
+}
+
+table {
+  font-size: 1.2vw;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  padding: 1rem 0.8rem;
+}
+
+#colum1 {
+  color: white;
+  background-color: black;
+  border: none
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  padding: 30px;
+  margin: 60px 10px 30px 0;
+  font-size: 0.8em;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}

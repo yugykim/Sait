@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(57, 169, 219);
+  font-family: Rubik, Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.form hr, .items hr {
+  width: 15%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form, .items, #result{
+  width: 20vw;
+  margin: 2vw;
+  height: 90vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.form {
+  line-height: 30px;
+}
+
+#logo {
+  height: 100px;
+  display: block;
+  margin: auto;
+}
+
+
+.toppings label, .cheesy label {
+  margin-right: 25px;
+}
+
+#showAdd, #invalidInput {
+  width: 100%;
+  background-color: yellow;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form, section{
+  margin: 1rem;
+}
+
+input[type='number']{
+  width: 50px;
+} 
+
+#placeOrder {
+  width: 10vw;
+  margin: 1vw;
+  height: 5vh;
+}

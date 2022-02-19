@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href="style.css">
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div id="overlay" >
+    <div id="showAdd" hidden>ADD</div>
+    <div id="invalidInput" hidden>Invalid Input</div>
+    <header>
+      <h1>Food hampers’</h1>
+    </header>
+    <div class="container">
+      <div class="form">
+        <form id="myForm" name="myForm">     
+          <label for="clientName">Client Name</label>
+          <input placeholder="Enter some text" id="clientName" name="clientclientNameName" oninput="updateData(this.value, this.id)" />
+          <hr>
+          <label for="address">Street Address</label>
+          <input type="address" name="address" id="address" oninput="updateData(this.value, this.id)"  />
+          <hr>
+          <label for="postalCode">Postal Code</label>
+          <input type="text" name="postalCode" id="postalCode"  oninput="updateData(this.value, this.id)" />
+          <hr>
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" name="phoneNumber" id="phoneNumber" oninput="updateData(this.value, this.id)" />
+          <br />
+          <div>
+            <input type="radio" name="phoneMethod" id="business" oninput="updateData(this.id, this.name)" />
+            <label for="business">Business</label>
+            <input type="radio" name="phoneMethod" id="personal" oninput="updateData(this.id, this.name)" />
+            <label for="personal">Personal</label>
+          </div>
+          <label for="email">Email</label>
+          <input id="email" name="email" required="" type="email" oninput="updateData(this.value, this.id)" />
+          <hr>
+          <span>Choice of Pickup or Delivery</span>
+          <div>
+            <input type="radio" id="pickup" name="shippingMethod" oninput="updateData(this.id, this.name)" >
+            <label for="pickup">Pick up</label>
+        
+            <input type="radio" id="delivery" name="shippingMethod" oninput="updateData(this.id, this.name)" >
+            <label for="delivery">Delivery</label>
+          </div>
+          <hr>
+          <input type="submit" value="submit" id="submitButton" onclick="myFormSubmit(event)"/>
+        </form>
+      </div>
+      <div class="items">
+        <section id="items-1">
+          <label>Vegetable Hamper</label>
+          <p>$30.00</p>
+          <br />
+          <input type="number" name="vegetable" id="vegetable" oninput="updateData(this.value, this.id)" min="0">
+          <button id="vegetable" onclick="showCart()">ADD</button>
+        </section>
+        <hr>
+        <section id="items-2">
+          <label>Fruit Hamper</label>
+          <p>$20.00</p>
+          <br />
+          <input type="number" name="fruit" id="fruit" oninput="updateData(this.value, this.id)" min="0">
+          <button id="fruit" onclick="showCart()">ADD</button>
+        </section>
+        <hr>
+        <section id="items-3">
+          <label>Fresh Chicken</label>
+          <p>$7.00</p>
+          <br />
+          <input type="number" name="chicken" id="chicken" oninput="updateData(this.value, this.id)" min="0">
+          <button id="chicken" onclick="showCart()">ADD</button>
+        </section>
+        <hr>
+        <section id="items-4">
+          <label>Pork</label>
+          <p>5/kg</p>
+          <br />
+          <input type="number" name="pork" id="pork" oninput="updateData(this.value, this.id)" min="0">
+          <button id="pork" onclick="showCart()">ADD</button>
+        </section>
+        <hr>
+        <button id="placeOrder" onclick="calculateOrder()">Place Order</button>
+      </div>
+      <div id="result" hidden>
+        <h1>Order</h1>
+        <div id="resultOrder"></div>
+        <div id="resultTotal"></div>
+      </div>
+    </div>    
+  </div>
+</body>
+
+</html>
