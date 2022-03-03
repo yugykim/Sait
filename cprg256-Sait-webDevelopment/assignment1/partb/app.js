@@ -19,6 +19,7 @@ let submitData = {
 
 
 function updateData(value, id) {
+  document.getElementById("currentDate").innerHTML = `${currentDate}`
   if (id === "address" || id === "phoneNumber" || id === "phoneMethod" || id === "shippingMethod"
     || id === "vegetable" || id === "pork" || id === "fruit" || id === "chicken"
     || id === "clientName" && /[a-zA-Z]/i.test(value)
