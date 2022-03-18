@@ -10,7 +10,6 @@ form.addEventListener("submit", formSubmit);
 
 function formSubmit(event) {
   event.preventDefault();
-  edit.disabled = false;
   addNewDatainObject();
   addNewCustomerID++;
 }
@@ -48,7 +47,7 @@ function displayInfo() {
   const form = Object.entries(customerlist);
   for (var i = 0; i < form.length; i++) {
     for (var k = 1; k < form[i].length; k++) {
-      yourInfo.innerHTML += `<input type="radio" name="userInfoSelect" value="" id="${i}" onclick="hideSubmitButton()" /><p>INFO : <br /> Date: ${form[i][k][0].Date} 
+      yourInfo.innerHTML += `<input type="radio" name="userInfoSelect" value="" id="${i}" onclick="checkDisabledButtons()" /><p>INFO : <br /> Date: ${form[i][k][0].Date} 
         <br /> First name: ${form[i][k][0].Firstname} 
         <br /> Last name: ${form[i][k][0].Lastname} 
         <br /> Address: ${form[i][k][0].Address} 
@@ -65,17 +64,15 @@ function displayInfo() {
   }
 }
 
-
-
 edit.addEventListener("click", setClientObject);
 
-function hideSubmitButton() {
-  submitButton.disabled = true;
+function checkDisabledButtons() {
+  submitButton.disabled = !submitButton.disabled;
+  edit.disabled = !edit.disabled;
 }
 
 function setClientObject() {
-  submitButton.disabled = false;
-  edit.disabled = true;
+  checkDisabledButtons();
   const checkedYourInfoInput = document.querySelectorAll("#yourInfo input[type=radio]:checked");
   let editUserInfoDataIndex = parseInt(checkedYourInfoInput[0].id);
   addNewDatainObject(editUserInfoDataIndex);
