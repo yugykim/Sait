@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Rose Country Finance</title>
+    <link rel='stylesheet' href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/505568b884.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+
+        <div id="logo"><img src="./img/logo.png" alt="logo" id="logo_img"></div>
+
+    </header>
+
+    <div id="main">
+
+        <div class="customer_info">
+            <form action="none" id="form" name="form">
+                <h2>Customer Info</h2>
+                <label>Currnet Date</label>
+                <input type="date" id="date" name="Date" value="" autofocus required />
+                <hr>
+                <label>First Name</label>
+                <input type="text" id="firstname" name="Firstname" placeholder="firstname" value="" pattern="[a-zA-Z]{1,15}" required/>
+                <hr>
+                <label>Last Name</label>
+                <input type="text" id="lastname" name="Lastname" placeholder="lastname" value="" pattern="[a-zA-Z]{1,15}" required/>
+                <hr>
+                <label>Street Address</label>
+                <input type="text" id="address" name="Address" placeholder="Address" value="" required />
+                <hr>
+                <label>Postal Code</label>
+                <input type="text" id="postalCode" name="PostalCode" placeholder="A0A 0A0"
+                    pattern="[a-zA-Z][0-9][a-zA-Z] [0-9][a-zA-Z][0-9]" value="" required />
+                <hr>
+                <label>Phone number</label>
+                <div id="phone">
+                <input type="radio" id="business" name="PhoneType" value="business" checked>business
+                <input type="radio" id="personal" name="PhoneType" value="personal">personal<br>
+                <input type="tel" id="phoneNumber" name="PhoneNumber" placeholder="0000000000" value=""
+                    pattern="[0-9]{10}" required />
+                </div>
+                <hr>
+                <label>E-mail</label>
+                <input type="text" id="email" name="Email" placeholder="wrose@cfinance.ca" value="" required />
+                <hr>
+
+                <h2>Additional Info</h2>
+                <label>Are you current clinets?</label>
+                <input type="radio" id="yes" name="currentStatus" value="yes" checked>Yes
+                <input type="radio" id="no" name="currentStatus" value="no">No
+                <hr>
+                <label>Gender</label>
+                <input type="radio" id="male"  name="genderType" value="male" checked>Male
+                <input type="radio" id="female" name="genderType" value="female">Female
+                <hr>
+                <label>Age</label>
+                <input type="number" id="age" name="age" min="18" required />
+                <hr>
+                <label>Own or Rent Home</label>
+                <input type="radio" id="own" name="HomeType" value="own" checked>Own
+                <input type="radio" id="rent" name="HomeType" value="rent">Rent
+                <hr>
+                <label>Annual Gross Income</label>
+                <input type="number" id="income" name="Income" min="0" placeholder="0" required />
+                <hr>
+                <label>Select Items</label>
+                <input type="checkbox" id="selectItems" name="vehicle" value="Vehicle">Vehicle
+                <input type="checkbox" id="selectItems" name="rrsp" value="RRSP">RRSP
+                <input type="checkbox" id="selectItems" name="tfsa" value="TFSA">TFSA
+                <input type="checkbox" id="selectItems" name="rrif" value="RRIF">RRIF <br><br>
+                <input type="submit" itemid="submit" value="Submit" id="submit">
+            </form>
+            <input type="button" value="Edit" disabled="true" id="edit">
+        </div>
+
+
+        <div id="displayInfo" hidden>
+            <h3>Your Info</h3>
+            <div id="yourInfo"></div>
+            <h3>Additional Info</h3>
+            <div id="additionalInfo"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

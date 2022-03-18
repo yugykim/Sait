@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+body {
+    background-image: url(./img/bg0.jpg);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+}
+
+#main {
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#logo {
+    margin: auto;
+}
+
+#logo_img {
+    width: 20vw;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+#phone {
+    display: inline-block;
+    text-align: left;
+}
+
+#business, #personal {
+    margin-bottom: 10px;
+}
