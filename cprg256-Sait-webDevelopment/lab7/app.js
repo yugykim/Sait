@@ -1,6 +1,4 @@
 let customerlist = {};
-
-const submit = document.querySelector("#form input");
 const submitButton = document.querySelector("#submit");
 const form = document.querySelector("#form");
 const edit = document.querySelector("#edit");
@@ -21,17 +19,23 @@ function addNewDatainObject(index) {
   index = index === undefined ? addNewCustomerID : index;
 
   const entries = Object.entries(form);
+
   for (var i = 0; i < entries.length; i++) {
-    if (entries[i][1].type === "radio" && !entries[i][1].checked || entries[i][1].type === "checkbox" && !entries[i][1].checked) {
+    if (entries[i][1].type === "radio" && !entries[i][1].checked
+      || entries[i][1].type === "checkbox" && !entries[i][1].checked 
+      || entries[i][1].value === "Submit") {
     } else {
       if (entries[i][1].id !== "selectItems") {
         element[entries[i][1].name] = entries[i][1].value;
+        entries[i][1].value = ""
       } else {
+        console.log("test");
         newSelectItemString += entries[i][1].value + " ";
+        entries[i][1].value = ""
       }
     }
   }
-  element["SelectItems"] = newSelectItemString;
+  element['SelectItems'] = newSelectItemString;
   crateNewCustomerInfoArr.push(element);
   customerlist[index] = crateNewCustomerInfoArr;
   displayInfo();
@@ -55,11 +59,11 @@ function displayInfo() {
         <br /> Home Type: ${form[i][k][0].HomeType} 
         <br /> Income: ${form[i][k][0].Income} 
         <br /> Select Items: ${form[i][k][0].SelectItems} 
-        <br /> current Status: ${form[i][k][0].currentStatus}
+        <br /> Are you current clinets?: ${form[i][k][0].currentStatus}
         <br /> Email:  ${form[i][k][0].Email}
-         <br /> PhoneType: ${form[i][k][0].PhoneType} 
-         <br /> PhoneNumber: ${form[i][k][0].PhoneNumber} 
-         <br /> AGE: ${form[i][k][0].age}<p>`;
+        <br /> PhoneType: ${form[i][k][0].PhoneType} 
+        <br /> PhoneNumber: ${form[i][k][0].PhoneNumber} 
+        <br /> AGE: ${form[i][k][0].age}<p>`;
     }
   }
 }
@@ -75,6 +79,7 @@ function setClientObject() {
   checkDisabledButtons();
   const checkedYourInfoInput = document.querySelectorAll("#yourInfo input[type=radio]:checked");
   let editUserInfoDataIndex = parseInt(checkedYourInfoInput[0].id);
-  addNewDatainObject(editUserInfoDataIndex);
+  delete customerlist[editUserInfoDataIndex];
+  displayInfo();
 }
 

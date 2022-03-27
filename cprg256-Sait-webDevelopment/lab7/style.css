@@ -2,23 +2,23 @@
 
 
 body {
-    background-image: url(./img/bg0.jpg);
+    background-image: url("./img/background.jpg");
+    background-color: #f8f7f2;
     background-size: cover;
     padding: 0;
     margin: 0;
-    height: 100vh;
-    box-sizing: border-box;
     font-family: 'Lora', serif;
+    text-align: center;
+}
+
+header {
+  text-align: left;
 }
 
 #main {
-    margin: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-#logo {
-    margin: auto;
+  display: flex;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 #logo_img {
@@ -26,16 +26,24 @@ body {
 }
 
 label {
-    display: inline-block;
-    width: 100px;
-    text-align: left;
+  display: inline-block;
+  margin: 10px;
 }
 
 #phone {
-    display: inline-block;
-    text-align: left;
+  display: inline-block;
+  text-align: left;
 }
 
 #business, #personal {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#submit, #edit {
+  width: 100px;
+  margin: 10px;
+}
+
+.customer_info {
+  width: 70%;
 }
